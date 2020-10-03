@@ -5,10 +5,12 @@ const styles: any = {
         justifyContent: 'center',
         backgroundColor: '#FFF',
         titleText: {
-            fontSize: 40,
-            fontWeight: "bold"
+            fontSize: 20,
+            fontWeight: "bold",
+            marginBottom:20
           }   
-    }
+    },
+    
 }
 
 export default styles;

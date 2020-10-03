@@ -1,0 +1,2 @@
+export const CHARACTERS = 'CHARACTERS';
+export const CHARACTERS_ASYNC = 'CHARACTERS_ASYNC';

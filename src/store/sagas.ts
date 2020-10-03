@@ -1,8 +1,8 @@
 import { all, fork } from 'redux-saga/effects';
-import { watchLogin } from './auth/saga';
+import { watchGetData } from './swApi/saga';
 
 export default function* () {
     yield all([
-        fork(watchLogin)
+        fork(watchGetData)
     ]);
 }

@@ -1,21 +1,21 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 import fetchService from '../../utils/fetchService';
-import { LOGIN, LOGIN_ASYNC } from './action-types';
+import { CHARACTERS, CHARACTERS_ASYNC } from './action-types';
 
-function* loginAsync({ payload }: any) {
+function* getDataAsync({ payload }: any) {
 //    const response = yield call(fetchService, 'https://jsonplaceholder.typicode.com/todos/2'); 
     try {
        
-       const response = yield call(fetchService, 'https://swapi.dev/api/people/1');
+       const response = yield call(fetchService, 'https://swapi.dev/api/people');
        
 
 
-//         console.log('response:' , response)
+//        console.log('response:' , response.results[0].name)
 //       console.log('response2: ', response.result[1])
 //       console.log('resultado3:' , response.results.length, response.results.name[0])
        yield put({
-            type: LOGIN_ASYNC,
-            payload: { user: response, isAuth: true }
+            type: CHARACTERS_ASYNC,
+            payload: { characters: response.results }
         });
 
     } catch(error) {
@@ -23,8 +23,8 @@ function* loginAsync({ payload }: any) {
     }
 }
 
-export function* watchLogin() {
-    yield takeLatest(LOGIN, loginAsync);
+export function* watchGetData() {
+    yield takeLatest(CHARACTERS, getDataAsync);
 }
 //for(let i = 0; i < names.length; i++) {
 //    console.log(names[i]);

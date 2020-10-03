@@ -1,10 +1,8 @@
 import { combineReducers } from 'redux';
-import counter from './counter/reducer';
-import auth from './auth/reducer';
+import swApi from './swApi/reducer';
 
 const reducers = combineReducers({
-    counter,
-    auth
+      swApi
 });
 
 export default reducers;

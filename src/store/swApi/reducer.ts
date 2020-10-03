@@ -1,14 +1,13 @@
-import { LOGIN_ASYNC } from "./action-types";
+import { CHARACTERS_ASYNC } from "./action-types";
 
 
 const initialState = {
-    user: {},
-    isAuth: false
-}
+    characters: []
+    }
 
 export default (state = initialState, { type, payload }: any) => {
     switch(type) {
-        case LOGIN_ASYNC:
+        case CHARACTERS_ASYNC:
         return { ...payload }
 
         default:
