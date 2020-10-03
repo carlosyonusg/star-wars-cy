@@ -27,10 +27,21 @@ const Login = ({ action, navigation, auth: { isAuth } }: any) => {
     }
   }, [isAuth])
 
+  
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => action.login({})}>
-        <Text>Login</Text>
+        <Text>Bienvenidos</Text>
+        <Text>  al mundo</Text>
+        <Text> Star Wars </Text>
+        <Text>           </Text>
+        <Text> 1  Personajes</Text>
+        <Text>*2  Planetas</Text>
+        <Text>*3  Vehiculos</Text>
+        <Text>*4  Peliculas32</Text>
+        <Text>             </Text>
+        <Text>*Por implementar</Text>
+
       </TouchableOpacity>
       <StatusBar style="auto" />
     </View>
